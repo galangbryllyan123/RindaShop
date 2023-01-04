@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@android:color/transparent" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip">
+	<androidx.cardview.widget.CardView android:id="@id/card_pop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" app:cardCornerRadius="10.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<ImageView android:id="@id/img_pop" android:layout_width="wrap_content" android:layout_height="wrap_content" android:scaleType="fitXY" android:adjustViewBounds="true" />
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<Button android:textColor="@color/colorPrimary" android:id="@id/btn_kiri_pop" android:background="@null" android:layout_width="fill_parent" android:layout_height="45.0dip" android:foreground="?android:selectableItemBackground" android:layout_weight="1.0" android:textAllCaps="false" />
+				<Button android:textColor="@android:color/white" android:id="@id/btn_kanan_pop" android:background="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="45.0dip" android:foreground="?android:selectableItemBackground" android:layout_weight="1.0" android:textAllCaps="false" />
+			</LinearLayout>
+		</LinearLayout>
+	</androidx.cardview.widget.CardView>
+	<Button android:textColor="@android:color/white" android:id="@id/close_pop" android:background="@drawable/close_radius" android:layout_width="34.0dip" android:layout_height="34.0dip" android:text="X" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

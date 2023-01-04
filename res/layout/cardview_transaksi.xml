@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/cardview_transaksi" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:foreground="?android:selectableItemBackground" app:cardCornerRadius="10.0dip" app:cardElevation="4.0dip" app:contentPadding="10.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@android:color/black" android:id="@id/r_judul" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Nama barang disini" android:textAlignment="textStart" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" />
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<ImageView android:layout_gravity="center" android:id="@id/gambar_brg" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:scaleType="fitXY" android:layout_marginStart="8.0dip" />
+			<LinearLayout android:orientation="vertical" android:id="@id/linearLayout3" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip">
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nomor Pembayaran" />
+				<TextView android:textSize="12.0sp" android:textColor="@android:color/black" android:gravity="fill_vertical" android:id="@id/nomor_pembayaran" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Status Pembayaran" />
+				<TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:gravity="fill_vertical" android:id="@id/status_bayar" android:background="@drawable/pending_text_background" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="MENUNGGU PEMBAYARAN" />
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Status Pengiriman" />
+				<TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/status_pengiriman" android:background="@drawable/pending_text_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BELUM DIKIRIM" />
+				<Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/btn_beri_ulasan" android:background="@drawable/ripple_button_round" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="36.0dip" android:layout_marginTop="16.0dip" android:text="Beri Ulasan" android:layout_weight="1.0" android:textAllCaps="false" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

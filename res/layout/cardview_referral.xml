@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:foreground="?android:selectableItemBackground" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" app:contentPadding="18.0dip">
+	<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<ImageView android:id="@id/img_status_ref" android:layout_width="40.0dip" android:layout_height="54.0dip" android:scaleType="centerInside" app:srcCompat="@drawable/ic_check_circle_48px" />
+		<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip">
+			<TextView android:textSize="18.0sp" android:textStyle="bold" android:ellipsize="end" android:id="@id/nama_member" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="textStart" />
+			<TextView android:ellipsize="end" android:id="@id/info_ref_riwayat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:maxLines="4" android:singleLine="false" />
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

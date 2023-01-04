@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+	<LinearLayout android:orientation="vertical" android:background="@drawable/background_transaksi_dibuat" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linier_email" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TextView android:textSize="18.0sp" android:textColor="@android:color/white" android:id="@id/text_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginRight="10.0dip" android:text="Link verifikasi telah dikirim ke email anda.\nSilahkan tekan link konfirmasi untuk mengaktifkan akun bukaOlshop Anda." android:textAlignment="center" />
+			<ImageView android:layout_width="90.0dip" android:layout_height="90.0dip" android:layout_marginTop="32.0dip" android:scaleType="fitXY" app:srcCompat="@drawable/mail" />
+			<TextView android:textColor="@android:color/white" android:id="@id/verif_email" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" />
+			<TextView android:textColor="@android:color/white" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="32.0dip" android:layout_marginRight="10.0dip" android:text="Tidak menerima Email?\nPastikan anda memeriksa folder Primary, social dan promotion pada kotak masuk email anda.\nJika tidak ditemukan, periksa folder spam anda." android:textAlignment="center" />
+			<Button android:textColor="@android:color/white" android:id="@id/button_kirim_ulang" android:background="@drawable/ripple_button_round_list" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="32.0dip" android:text="Kirim ulang email" />
+		</LinearLayout>
+		<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linier_moderasi" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" android:text="Akun anda sedang dalam peninjauan\n\nSilahkan hubungi admin untuk aktivasi akun" android:textAlignment="center" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+			<ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" app:srcCompat="@drawable/coffee" />
+			<Button android:textColor="@android:color/white" android:id="@id/keluar_moderasi" android:background="@drawable/ripple_button_round_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="Keluar" />
+		</LinearLayout>
+		<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/linier_maintenance" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TextView android:textSize="20.0sp" android:textColor="@android:color/white" android:id="@id/txt_maintenance" android:paddingLeft="15.0dip" android:paddingRight="15.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="32.0dip" android:text="Aplikasi" android:textAlignment="center" android:layout_marginStart="32.0dip" android:layout_marginEnd="32.0dip" />
+			<ImageView android:layout_width="95.0dip" android:layout_height="93.0dip" app:srcCompat="@drawable/maintenance" />
+			<Button android:textColor="@android:color/white" android:id="@id/keluar_maintenance" android:background="@drawable/ripple_button_round_list" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="Keluar" />
+		</LinearLayout>
+	</LinearLayout>
+</androidx.core.widget.NestedScrollView>

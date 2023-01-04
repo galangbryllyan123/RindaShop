@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/cardview_voucher" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:foreground="?android:selectableItemBackground" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="10.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<androidx.constraintlayout.widget.ConstraintLayout android:background="@drawable/background_transaksi_dibuat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+			<ImageView android:id="@id/gambar_voucher" android:layout_width="0.0dip" android:layout_height="100.0dip" android:scaleType="fitXY" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/vouch" />
+			<TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/kode_voucher" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="DNJASN" android:layout_marginStart="8.0dip" app:layout_constraintBottom_toBottomOf="@id/gambar_voucher" app:layout_constraintStart_toStartOf="@id/gambar_voucher" />
+			<TextView android:textSize="9.0sp" android:textColor="@android:color/white" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Kode Voucher" app:layout_constraintBottom_toTopOf="@id/kode_voucher" app:layout_constraintStart_toStartOf="@id/kode_voucher" />
+		</androidx.constraintlayout.widget.ConstraintLayout>
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="18.0dip" android:layout_weight="1.0">
+			<LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="2.0">
+				<TextView android:textSize="18.0sp" android:textColor="@android:color/holo_blue_dark" android:id="@id/tipe_voucher" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="TextView" android:layout_weight="1.0" />
+				<TextView android:textSize="18.0sp" android:textColor="@android:color/holo_green_dark" android:gravity="center_vertical" android:id="@id/potongan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="Rp.40000" android:layout_weight="1.0" />
+				<TextView android:textSize="12.0sp" android:textColor="@color/colorPrimaryDark" android:id="@id/limit" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:layout_marginTop="8.0dip" android:text="Limit 40" android:layout_weight="1.0" />
+				<TextView android:textSize="12.0sp" android:id="@id/tanggal_berakhir" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="dsad" android:layout_weight="1.0" />
+				<TextView android:textSize="12.0sp" android:id="@id/minimal_belanja" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="18.0dip" android:text="dsad" android:layout_weight="1.0" />
+			</LinearLayout>
+			<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="wrap_content" android:layout_height="fill_parent">
+				<ImageView android:id="@id/copy_voucher" android:padding="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:tint="@color/colorPrimaryDark" app:srcCompat="?actionModeCopyDrawable" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<ImageButton android:id="@id/button_close" android:background="?selectableItemBackgroundBorderless" android:layout_width="?actionBarSize" android:layout_height="?actionBarSize" android:tint="@android:color/white" app:srcCompat="@drawable/ic_close" />
+			<TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/saldo_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Topup Saldo" android:layout_weight="1.0" />
+		</LinearLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+	<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+		<LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TextView android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Silahkan lakukan pembayaran ke rekening dibawah.\nKlik untuk copy nomor rekening." />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total Transfer" />
+				<TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:id="@id/konfirmasi_jumlah_bayar" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_weight="1.0" />
+				<TextView android:id="@id/unik" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pastikan anda mengirim tepat sesuai nominal diatas." />
+			</LinearLayout>
+			<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list_rek" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" />
+			<Button android:textColor="@android:color/white" android:id="@id/btn_konfirmasi_topup" android:background="@drawable/ripple_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="16.0dip" android:text="Konfirmasi Pembayaran" />
+			<Button android:textColor="#ff807f7f" android:id="@id/jumlah_lain" android:background="@null" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TopUp dengan jumlah lain" />
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>

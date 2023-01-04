@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.material.appbar.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@id/app_bar" android:layout_width="fill_parent" android:layout_height="300.0dip">
+		<com.google.android.material.appbar.CollapsingToolbarLayout android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="exitUntilCollapsed|scroll">
+			<RelativeLayout android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_collapseMode="parallax" app:layout_collapseParallaxMultiplier="0.2">
+				<id.crescento.CrescentoContainer android:layout_width="fill_parent" android:layout_height="280.0dip" android:scaleType="centerCrop" app:curvature="35.0dip">
+					<id.crescento.CrescentoImageView android:id="@id/img_akun" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="centerCrop" />
+					<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<RelativeLayout android:layout_gravity="center_horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="25.0dip">
+							<TextView android:textSize="30.0sp" android:textColor="@android:color/white" android:id="@id/inisial" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="B" android:layout_centerInParent="true" android:translationZ="20.0dip" />
+							<androidx.cardview.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" app:cardCornerRadius="70.0dip" app:cardElevation="6.0dip">
+								<ImageView android:id="@id/foto_user" android:layout_width="115.0dip" android:layout_height="115.0dip" android:src="@drawable/bg_circle" android:scaleType="centerCrop" />
+							</androidx.cardview.widget.CardView>
+						</RelativeLayout>
+						<TextView android:textSize="21.0sp" android:textStyle="bold" android:textColor="#ffffffff" android:layout_gravity="center_horizontal" android:id="@id/nama_user" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:text="sdad" />
+						<LinearLayout android:gravity="center_vertical" android:layout_gravity="center_horizontal" android:orientation="horizontal" android:id="@id/linier_membership" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_marginBottom="12.0dip">
+							<TextView android:textSize="13.0sp" android:textColor="#ffffffff" android:id="@id/membership_level" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+							<ImageView android:id="@id/icon_membership" android:padding="2.0dip" android:layout_width="25.0dip" android:layout_height="fill_parent" android:src="@drawable/image" android:scaleType="centerInside" />
+						</LinearLayout>
+					</LinearLayout>
+				</id.crescento.CrescentoContainer>
+				<androidx.cardview.widget.CardView android:id="@id/card_invoice" android:layout_width="350.0dip" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_alignParentBottom="true" android:alpha="0.98" android:layout_marginStart="30.0dip" android:layout_marginEnd="30.0dip" android:layout_alignParentStart="true" android:layout_alignParentEnd="true" app:cardBackgroundColor="#fffafafa" app:cardCornerRadius="15.0dip" app:contentPadding="10.0dip">
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0">
+						<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+							<TextView android:textSize="20.0sp" android:textColor="@color/hitam" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Invoice" />
+							<TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:id="@id/invoice" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+						</LinearLayout>
+						<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+							<TextView android:textSize="20.0sp" android:textColor="@color/hitam" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Dikirim" />
+							<TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:id="@id/status_pengiriman" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+						</LinearLayout>
+						<LinearLayout android:gravity="center" android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0">
+							<TextView android:textSize="20.0sp" android:textColor="@color/hitam" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Sukses" />
+							<TextView android:textSize="20.0sp" android:textStyle="bold" android:textColor="@color/colorPrimaryDark" android:id="@id/status_sukses" android:paddingTop="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+						</LinearLayout>
+					</LinearLayout>
+				</androidx.cardview.widget.CardView>
+			</RelativeLayout>
+		</com.google.android.material.appbar.CollapsingToolbarLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+	<include layout="@layout/content_akun" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

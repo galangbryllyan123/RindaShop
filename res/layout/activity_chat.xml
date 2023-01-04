@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+	<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_chat" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/linier_chat_admin" />
+	<LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/linier_chat_admin" android:paddingLeft="10.0dip" android:paddingTop="5.0dip" android:paddingRight="10.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:layout_alignParentBottom="true" android:layout_alignParentStart="true">
+		<EditText android:id="@id/isi_chat" android:background="@drawable/edit_shape_chat" android:padding="13.0dip" android:layout_width="wrap_content" android:layout_height="fill_parent" android:hint="Pesan" android:ems="10" android:singleLine="false" android:maxLength="150" android:layout_weight="1.0" android:inputType="textLongMessage|textMultiLine" />
+		<ImageButton android:id="@id/kirim_gambar" android:background="@drawable/ripple_dark_kotak" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.3" app:srcCompat="@drawable/ic_camera_alt_24px" />
+		<ImageButton android:id="@id/kirim_chat" android:background="@drawable/alamat_bg3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_weight="0.2" android:paddingStart="10.0dip" android:paddingEnd="10.0dip" app:srcCompat="@drawable/ic_send_24px" />
+	</LinearLayout>
+</RelativeLayout>

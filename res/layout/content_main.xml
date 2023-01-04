@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+	<com.google.android.material.bottomnavigation.BottomNavigationView android:id="@id/bottom_navigation" android:background="#fffcfcfc" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_alignParentBottom="true" app:labelVisibilityMode="labeled" app:menu="@menu/navigation" />
+	<id.costum.kostumViewPager android:id="@id/viewpager" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/bottom_navigation" android:layout_alignParentTop="true" app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+	<TextView android:textColor="@android:color/white" android:id="@id/tutup" android:background="@android:color/holo_orange_dark" android:paddingTop="12.0dip" android:paddingBottom="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Maaf, toko ini sedang tutup" android:layout_above="@id/bottom_navigation" android:textAlignment="center" />
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:gravity="center" android:orientation="vertical" android:background="@drawable/dialog_background" android:padding="20.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content">
+	<TextView android:textSize="18.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Filter Hasil Pencarian" android:textAlignment="center" />
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+		<TextView android:textStyle="bold" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Rentang Harga" />
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<EditText android:id="@id/minimal" android:background="@drawable/edit_shape" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Minimal" android:ems="10" android:layout_weight="1.0" android:inputType="phone" />
+			<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="   -   " android:layout_weight="0.0" />
+			<EditText android:id="@id/maksimal" android:background="@drawable/edit_shape" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:hint="Maksimal" android:ems="10" android:layout_weight="1.0" android:inputType="numberDecimal" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+		<TextView android:textStyle="bold" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Kondisi Barang" />
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<Button android:textColor="@android:color/white" android:id="@id/btn_kondisi_baru" android:background="@drawable/alamat_bg3_kiri" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Baru" android:layout_weight="1.0" />
+			<Button android:textColor="@android:color/white" android:id="@id/btn_kondisi_bekas" android:background="@drawable/alamat_bg3" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginLeft="1.0dip" android:text="Bekas" android:layout_weight="1.0" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="10.0dip">
+		<TextView android:textStyle="bold" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Penawaran" />
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<Button android:textColor="@android:color/white" android:id="@id/btn_diskon" android:background="@drawable/alamat_bg3_kiri" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="1.0dip" android:text="Diskon" android:layout_weight="1.0" android:textAllCaps="false" />
+			<Button android:textColor="@android:color/white" android:id="@id/btn_promo" android:background="@drawable/ripple_button2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginRight="1.0dip" android:text="Promo" android:layout_weight="1.0" android:textAllCaps="false" />
+			<Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/btn_ongkir" android:background="@drawable/alamat_bg3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:text="Gratis Ongkir" android:layout_weight="0.8" android:textAllCaps="false" />
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip">
+		<TextView android:textStyle="bold" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Jasa Pengiriman" />
+		<Spinner android:id="@id/jasa_spinner" android:layout_width="fill_parent" android:layout_height="0.0dip" android:layout_weight="1.0" />
+	</LinearLayout>
+	<Button android:textColor="@android:color/white" android:id="@id/gunakan_filter" android:background="@drawable/ripple_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="15.0dip" android:text="Gunakan Filter" />
+</LinearLayout>

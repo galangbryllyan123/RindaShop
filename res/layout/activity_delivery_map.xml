@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:map="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<Button android:textColor="@android:color/white" android:id="@id/btn_pilih_lokasi" android:background="@drawable/ripple_button_round" android:paddingLeft="10.0dip" android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Lokasi ini" android:layout_above="@id/imageView9" android:layout_centerHorizontal="true" android:alpha="0.8" />
+	<fragment android:name="com.google.android.gms.maps.SupportMapFragment" android:id="@id/map" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+	<ProgressBar android:id="@id/progressBar_maps" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_above="@id/btn_pilih_lokasi" android:layout_centerHorizontal="true" style="?android:progressBarStyle" />
+	<View android:id="@id/tengah" android:layout_width="1.0dip" android:layout_height="1.0dip" android:layout_centerInParent="true" />
+	<ImageView android:id="@id/imageView9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/marker_maps" android:layout_above="@id/tengah" android:layout_centerHorizontal="true" />
+	<androidx.cardview.widget.CardView android:id="@id/card_delivery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:layout_marginBottom="10.0dip" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" android:layout_marginStart="10.0dip" android:layout_marginEnd="10.0dip" map:cardCornerRadius="10.0dip" map:cardElevation="9.0dip" map:contentPadding="10.0dip">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:animateLayoutChanges="true">
+			<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="Rincian Biaya Delivery" android:layout_weight="1.0" />
+				<Button android:textSize="10.0sp" android:textColor="@color/background_text_color" android:id="@id/btn_batal_maps" android:background="@null" android:layout_width="wrap_content" android:layout_height="fill_parent" android:text="Batal" />
+			</LinearLayout>
+			<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+				<EditText android:textSize="12.0sp" android:id="@id/edit_lokasi_txt" android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:paddingTop="8.0dip" android:paddingRight="8.0dip" android:paddingBottom="8.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Masukkan alamat" android:maxLines="3" android:ems="10" android:maxLength="250" android:layout_weight="1.0" android:inputType="textMultiLine" />
+				<TextView android:textColor="@android:color/holo_green_dark" android:id="@id/lokasi_txt" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" android:textAlignment="textStart" />
+				<ImageButton android:id="@id/edit_lokasi" android:background="@drawable/ripple_button_round_list" android:padding="7.0dip" android:visibility="gone" android:layout_width="36.0dip" android:layout_height="36.0dip" android:src="@drawable/pendua" android:scaleType="centerInside" />
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+					<TextView android:textColor="@android:color/black" android:layout_width="150.0dip" android:layout_height="wrap_content" android:text="Biaya Delivery" />
+					<TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@id/total_ongkir_delivery" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				</LinearLayout>
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginBottom="16.0dip">
+					<TextView android:textColor="@android:color/black" android:layout_width="150.0dip" android:layout_height="wrap_content" android:text="Jarak Tempuh" />
+					<TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@id/total_jarak_member" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				</LinearLayout>
+				<TextView android:textColor="@android:color/holo_red_dark" android:id="@id/siboncel" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="12.0dip" android:textAlignment="center" />
+				<LinearLayout android:orientation="vertical" android:id="@id/linier_telepon" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<TextView android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nama Penerima" />
+					<EditText android:id="@id/nama_penerima_delivery" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Nama Penerima" android:ems="10" android:maxLength="40" android:inputType="textPersonName|textCapWords" />
+					<TextView android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Nomor Telepon" />
+					<EditText android:id="@id/no_hp_delivery" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Nomor Telepon Anda" android:ems="10" android:maxLength="17" android:inputType="phone" />
+				</LinearLayout>
+			</LinearLayout>
+			<Button android:textColor="@android:color/white" android:id="@id/set_lokasi_btn" android:background="@drawable/ripple_button_round" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:text="Selesai" />
+		</LinearLayout>
+	</androidx.cardview.widget.CardView>
+</RelativeLayout>

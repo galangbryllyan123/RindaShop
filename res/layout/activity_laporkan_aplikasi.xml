@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="18.0dip" android:layout_marginRight="18.0dip" android:animateLayoutChanges="true">
+		<TextView android:textSize="16.0dip" android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="16.0dip" android:text="Laporkan Penyalahgunaan Aplikasi" android:textAlignment="center" />
+		<LinearLayout android:orientation="vertical" android:id="@id/linier_nologin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+			<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nama Lengkap" />
+			<EditText android:id="@id/txt_namalengkap" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Nama Lengkap" android:inputType="textPersonName|textCapWords" />
+			<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="Nomor Whatapp" />
+			<EditText android:id="@id/txt_nowa" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Nomor Whatsapp Aktif" android:inputType="number" />
+		</LinearLayout>
+		<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="Jenis Laporan" />
+		<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="38.0dip">
+			<Spinner android:id="@id/spinner_jenislaporan" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+		</FrameLayout>
+		<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="Kronologi Laporan" />
+		<EditText android:id="@id/isi_laporan" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Jelaskan kronologi permasalahan anda disini" android:minLines="7" android:inputType="textLongMessage|textMultiLine" />
+		<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="Tambahkan screenshot/foto pendukung" />
+		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<ImageView android:id="@id/foto_laporan1" android:layout_width="100.0dip" android:layout_height="100.0dip" android:scaleType="centerInside" android:layout_weight="1.0" app:srcCompat="@drawable/image" />
+			<ImageView android:id="@id/foto_laporan2" android:layout_width="100.0dip" android:layout_height="100.0dip" android:scaleType="centerInside" android:layout_weight="1.0" app:srcCompat="@drawable/image" />
+			<ImageView android:id="@id/foto_laporan3" android:layout_width="100.0dip" android:layout_height="100.0dip" android:scaleType="centerInside" android:layout_weight="1.0" app:srcCompat="@drawable/image" />
+		</LinearLayout>
+		<Button android:textColor="@android:color/white" android:id="@id/submit_laporan" android:background="@drawable/ripple_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="64.0dip" android:text="Submit Laporan" />
+	</LinearLayout>
+</androidx.core.widget.NestedScrollView>

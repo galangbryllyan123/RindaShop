@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:icon="@drawable/ic_home_black_24dp" android:id="@id/home_menu" android:title="@string/title_home" />
+	<item android:icon="@drawable/ic_dashboard_black_24dp" android:id="@id/menu_kategori" android:title="Jelajah" />
+	<item android:icon="@drawable/ic_swap_horiz_48px" android:id="@id/menu_transaksi" android:title="Transaksi" />
+	<item android:icon="@drawable/ic_face_48px" android:id="@id/akun_menu" android:title="Akun" />
+</menu>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/cardview_alamat" android:clickable="false" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="15.0dip" android:layout_marginBottom="10.0dip" android:foreground="?android:selectableItemBackground" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="10.0dip" app:contentPadding="10.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Informasi Lokasi" />
+			<TextView android:textSize="14.0sp" android:id="@id/alamat_kota" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" />
+			<TextView android:textSize="14.0sp" android:id="@id/alamat_rumah" android:layout_width="wrap_content" android:layout_height="0.0dip" android:layout_marginTop="5.0dip" android:text="Dikonfirmasi" android:layout_weight="1.0" />
+			<TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="10.0dip" android:text="Informasi Kontak" />
+			<TextView android:textSize="14.0sp" android:gravity="center" android:id="@id/alamat_kontak" android:layout_width="wrap_content" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:text="Belum dikirim" android:textAlignment="gravity" app:layout_constraintStart_toStartOf="@id/alamat_kota" />
+		</LinearLayout>
+		<LinearLayout android:orientation="horizontal" android:id="@id/alamat_linier" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="30.0dip">
+			<Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/alamat_utama" android:background="@drawable/alamat_bg1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Jadikan Alamat Utama" android:layout_weight="1.0" />
+			<ImageButton android:id="@id/hapus_alamat" android:background="@drawable/alamat_bg2" android:padding="6.0dip" android:layout_width="90.0dip" android:layout_height="fill_parent" android:src="@drawable/delete" android:scaleType="fitCenter" android:layout_weight="1.0" />
+		</LinearLayout>
+		<TextView android:textColor="@android:color/white" android:gravity="center" android:id="@id/default_alamat" android:background="@drawable/diterima_text_background" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="30.0dip" android:text="Alamat Utama Pengiriman" android:textAlignment="center" />
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

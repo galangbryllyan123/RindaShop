@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/cardview_saldo" android:padding="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:foreground="?android:selectableItemBackground" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="8.0dip" app:cardElevation="3.0dip" app:contentPadding="8.0dip" app:layout_editor_absoluteX="10.0dip" app:layout_editor_absoluteY="10.0dip">
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<ImageView android:layout_width="30.0dip" android:layout_height="fill_parent" />
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="12.0dip">
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+				<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Tanggal" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text=":" />
+				<TextView android:textColor="@android:color/black" android:id="@id/tanggal_topup" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+				<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Jumlah" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text=":" />
+				<TextView android:textColor="@android:color/holo_green_dark" android:id="@id/jumlah_topup" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+				<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Status" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="4.0dip" android:text=":" />
+				<TextView android:textColor="@color/colorPrimaryDark" android:id="@id/status_topup" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

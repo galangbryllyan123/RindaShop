@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<ImageButton android:id="@id/button_close" android:background="?selectableItemBackgroundBorderless" android:layout_width="?actionBarSize" android:layout_height="?actionBarSize" android:tint="@android:color/white" app:srcCompat="@drawable/ic_close" />
+			<TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/saldo_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+		</LinearLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+	<LinearLayout android:orientation="vertical" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+		<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Saldo Akhir Anda" />
+		<TextView android:textSize="24.0sp" android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:id="@id/saldo_sekarang" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<TextView android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="Jumlah Penarikan Dana" />
+		<id.costum.EditTextCurrency android:id="@id/jumlah_drawl" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Masukkan jumlah penarikan" android:ems="10" android:inputType="number" />
+		<TextView android:textSize="12.0sp" android:textColor="@android:color/holo_orange_dark" android:id="@id/text_penarikan" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<TextView android:textSize="12.0sp" android:textColor="@android:color/holo_orange_dark" android:id="@id/text_biaya" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<TextView android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Nama Bank Tujuan + Nama Penerima" />
+		<EditText android:id="@id/nama_bank" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:hint="Contoh BCA a/n Nama Anda" android:ems="10" android:inputType="textPostalAddress" />
+		<TextView android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="Nomor Rekening Tujuan" />
+		<EditText android:id="@id/nomor_rek" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="" android:hint="Nomor Rekening Anda" android:ems="10" android:inputType="textPersonName|textCapCharacters" />
+		<Button android:textColor="@android:color/white" android:id="@id/btn_drawl" android:background="@drawable/ripple_button_round" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:text="Minta Penarikan Dana" />
+	</LinearLayout>
+</LinearLayout>

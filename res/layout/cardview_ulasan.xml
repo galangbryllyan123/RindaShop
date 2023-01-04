@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/card_ulasan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="16.0dip" app:cardCornerRadius="8.0dip" app:cardElevation="2.0dip" app:contentPadding="16.0dip">
+	<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="46.0dip">
+			<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+				<TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@id/txt_nama_user" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TextView" />
+				<RatingBar android:id="@id/ratingBar_ulasan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:numStars="5" android:stepSize="1.0" android:isIndicator="false" android:progressTint="@android:color/holo_orange_light" android:secondaryProgressTint="@android:color/holo_orange_dark" style="?android:ratingBarStyleSmall" />
+			</LinearLayout>
+			<androidx.cardview.widget.CardView android:layout_gravity="center" android:background="@null" android:layout_width="40.0dip" android:layout_height="40.0dip" android:layout_margin="4.0dip" app:cardCornerRadius="120.0dip">
+				<TextView android:textStyle="bold" android:textColor="@color/colorPrimary" android:layout_gravity="center" android:id="@id/txt_inisial_ulasan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textAlignment="center" />
+				<ImageView android:id="@id/i_foto_user" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+			</androidx.cardview.widget.CardView>
+		</LinearLayout>
+		<TextView android:textColor="@android:color/black" android:id="@id/txt_isi_ulasan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="TextView TextView TextView TextView " />
+		<ImageView android:id="@id/gambar_ulasan" android:visibility="gone" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_marginTop="8.0dip" />
+		<TextView android:id="@id/txt_tanggal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="TextView" />
+		<TextView android:textColor="@color/colorPrimary" android:id="@id/txt_ubah_ulasan" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Ubah Ulasan" />
+		<androidx.cardview.widget.CardView android:id="@id/card_balasan_admin" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="6.0dip" android:layout_marginBottom="6.0dip" app:cardBackgroundColor="#fff3f3f3" app:cardCornerRadius="8.0dip" app:cardElevation="1.0dip" app:contentPadding="16.0dip">
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:textSize="11.0sp" android:textColor="@android:color/white" android:id="@id/textView6" android:background="@drawable/default_text_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" />
+				<TextView android:textColor="@android:color/black" android:id="@id/txt_balasan_admin" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:text="TextView" />
+			</LinearLayout>
+		</androidx.cardview.widget.CardView>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

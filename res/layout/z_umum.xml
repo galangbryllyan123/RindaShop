@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@id/linier_umum" android:layout_width="fill_parent" android:layout_height="wrap_content">
+	<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="8.0dip">
+		<TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@id/txt_umum" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="" android:layout_weight="1.0" />
+		<Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/btnMore2" android:background="@drawable/ripple_button_round" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="33.0dip" android:layout_marginTop="6.0dip" android:layout_marginBottom="6.0dip" android:text="MORE" android:textAllCaps="false" />
+	</LinearLayout>
+	<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_umum" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

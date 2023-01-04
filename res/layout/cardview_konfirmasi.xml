@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/cardview_ongkir" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" app:cardCornerRadius="8.0dip" app:cardElevation="2.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical" android:id="@id/linier_ekspedisi_card" android:background="@color/colorPrimary" android:padding="24.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<FrameLayout android:background="@drawable/edit_shape" android:layout_width="fill_parent" android:layout_height="38.0dip">
+				<Spinner android:id="@id/spinner_ekspedisi" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+			</FrameLayout>
+			<FrameLayout android:background="@drawable/edit_shape" android:layout_width="fill_parent" android:layout_height="38.0dip" android:layout_marginTop="20.0dip">
+				<Spinner android:id="@id/spinner_ongkir" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+			</FrameLayout>
+			<TextView android:textSize="14.0sp" android:textStyle="bold" android:textColor="@android:color/white" android:id="@id/biaya_membership_multi_keranjang" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" />
+		</LinearLayout>
+		<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list_produk_transaksi" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" android:nestedScrollingEnabled="false" />
+		<LinearLayout android:orientation="vertical" android:background="#fffafafa" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<TextView android:textSize="12.0sp" android:id="@id/ongkir_keranjang" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:textAlignment="textEnd" />
+			<TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/holo_orange_dark" android:id="@id/biaya_tambahan" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:textAlignment="textEnd" />
+			<TextView android:textColor="@android:color/black" android:id="@id/total_keranjang" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_marginBottom="10.0dip" android:text="Total Keranjang : " android:textAlignment="textEnd" />
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

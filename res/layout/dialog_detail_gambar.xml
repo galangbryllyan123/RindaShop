@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@android:color/black" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<id.costum.TouchImageView android:id="@id/iv_content" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_above="@id/linier_preview" app:srcCompat="@drawable/progress_image" />
+	<ImageView android:id="@id/ic_back" android:background="@drawable/ic_close" android:layout_width="30.0dip" android:layout_height="30.0dip" android:layout_margin="15.0dip" />
+	<Button android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/save_preview" android:background="@drawable/ripple_button_round" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="15.0dip" android:layout_marginBottom="15.0dip" android:text="     Simpan Gambar     " android:layout_above="@id/linier_preview" android:layout_alignParentRight="true" android:textAllCaps="false" android:layout_marginStart="15.0dip" android:layout_marginEnd="15.0dip" />
+	<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/linier_preview" android:layout_width="fill_parent" android:layout_height="52.0dip" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="16.0dip" android:layout_alignParentBottom="true" />
+</RelativeLayout>

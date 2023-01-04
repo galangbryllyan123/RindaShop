@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<com.daimajia.slider.library.SliderLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:custom="http://schemas.android.com/apk/res-auto" android:id="@id/home_slider" android:layout_width="fill_parent" android:layout_height="220.0dip" android:layout_marginTop="24.0dip" custom:auto_cycle="true" />

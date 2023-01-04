@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/cari_nodata" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintHorizontal_bias="0.493" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:layout_constraintVertical_bias="0.3">
+		<ImageView android:id="@id/imageView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cari" />
+		<TextView android:textSize="18.0sp" android:id="@id/query_nodata" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+	</LinearLayout>
+	<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<LinearLayout android:orientation="horizontal" android:padding="15.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<Button android:textColor="@android:color/white" android:id="@id/filter_btn" android:background="@drawable/alamat_bg1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Filter" android:layout_weight="1.0" />
+				<Button android:textColor="@android:color/white" android:id="@id/sort_btn" android:background="@drawable/alamat_bg3" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Sort" android:layout_weight="1.0" />
+			</LinearLayout>
+			<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_cari" android:layout_width="fill_parent" android:layout_height="wrap_content" android:isScrollContainer="false" android:nestedScrollingEnabled="false" />
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+	<ProgressBar android:id="@id/progress_cari" android:layout_width="wrap_content" android:layout_height="wrap_content" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" style="?android:progressBarStyle" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/item_row" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="5.0dip" android:foreground="?selectableItemBackground" app:cardCornerRadius="5.0dip" app:cardElevation="1.0dip" app:contentPadding="5.0dip">
+	<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<androidx.cardview.widget.CardView android:layout_gravity="center" android:layout_width="80.0dip" android:layout_height="80.0dip" app:cardCornerRadius="5.0dip" app:cardElevation="0.0dip">
+			<ImageView android:id="@id/item_img" android:layout_width="fill_parent" android:layout_height="fill_parent" android:scaleType="fitXY" />
+		</androidx.cardview.widget.CardView>
+		<TextView android:textSize="13.0sp" android:ellipsize="none" android:id="@id/item_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" />
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

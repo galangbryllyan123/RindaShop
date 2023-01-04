@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/constrait_konfirm" android:layout_alignParentTop="true" android:layout_alignParentStart="true">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+			<androidx.cardview.widget.CardView android:id="@id/card_alamat" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" app:cardCornerRadius="8.0dip" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+					<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Alamat Pengiriman" android:layout_marginStart="8.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+					<TextView android:textColor="@color/normalColor" android:id="@id/no_alamat" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:text="Belum ada alamat yang dibuat" />
+					<LinearLayout android:orientation="vertical" android:id="@id/linier_list_alamat" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+						<TextView android:textColor="@color/normalColor" android:id="@id/alamat_lengkap" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+						<TextView android:textColor="@color/normalColor" android:id="@id/alamat_kota" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+						<TextView android:textColor="@color/normalColor" android:id="@id/kontak_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+					</LinearLayout>
+					<Switch android:id="@id/switch_dropship" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="16.0dip" android:text="Kirim atas nama saya (Dropship)" />
+					<LinearLayout android:orientation="vertical" android:id="@id/linier_dropship" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="25.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="12.0dip">
+						<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nama Pengirim" />
+						<EditText android:id="@id/nama_pengirim" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Nama pengirim produk ini" android:ems="10" android:inputType="textPersonName|textCapSentences" android:imeOptions="actionNext" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="@id/textView" app:layout_constraintTop_toBottomOf="@id/textView" />
+						<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Nomor Telepon" />
+						<EditText android:id="@id/no_hp_dropship" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Nomor Telepon" android:ems="10" android:inputType="phone" android:imeOptions="actionDone" />
+						<LinearLayout android:orientation="vertical" android:id="@id/margin_linier" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+							<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Margin Keuntungan" />
+							<id.costum.EditTextCurrency android:id="@id/jumlah_keuntungan" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Masukkan jumlah keuntungan anda" android:ems="10" android:inputType="number" />
+							<TextView android:id="@id/jumlah_keuntungan_info" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Margin Keuntungan anda akan masuk ke saldo anda setelah transaksi selesai." />
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="12.0dip">
+						<Button android:textColor="@android:color/white" android:id="@id/tambah_alamat" android:background="@drawable/alamat_bg1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Tambah Alamat" android:layout_weight="1.0" android:textAllCaps="false" />
+						<Button android:textColor="@android:color/white" android:id="@id/pilih_alamat_single" android:background="@drawable/alamat_bg3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Alamat" android:layout_weight="1.0" android:textAllCaps="false" />
+					</LinearLayout>
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" app:cardCornerRadius="8.0dip" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+					<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/textVie" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pilih Pembayaran" android:layout_weight="1.0" android:layout_marginStart="8.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+					<RadioGroup android:id="@id/grup_pembayaran" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="8.0dip">
+						<RadioButton android:id="@id/radio_saldo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Saldo" android:layout_weight="1.0" />
+						<LinearLayout android:orientation="vertical" android:id="@id/linier_saldo" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="32.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="1.0">
+							<TextView android:textColor="@android:color/holo_green_dark" android:id="@id/jumlah_saldo" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							<TextView android:textColor="@android:color/holo_red_dark" android:id="@id/saldo_tidak_cukup" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Saldo tidak cukup" android:layout_weight="1.0" />
+						</LinearLayout>
+						<RadioButton android:id="@id/radio_transfer" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Transfer Bank" />
+						<LinearLayout android:orientation="vertical" android:id="@id/linier_transfer" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip">
+							<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip" android:layout_weight="1.0" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textVie">
+								<Spinner android:id="@id/spinner_varian" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+							</FrameLayout>
+							<LinearLayout android:orientation="horizontal" android:id="@id/linier_kode_unik" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="8.0dip">
+								<Switch android:id="@id/switch_konfirmasi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Konfirmasi Otomatis" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/spinner_varian" />
+								<Button android:textColor="@android:color/white" android:id="@id/info_otomatis" android:background="@drawable/tambah_radius" android:layout_width="25.0dip" android:layout_height="25.0dip" android:layout_marginBottom="3.0dip" android:text="\?" />
+							</LinearLayout>
+						</LinearLayout>
+						<RadioButton android:id="@id/radio_cod" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cash on delivery (COD)" />
+						<TextView android:textColor="@color/colorPrimaryDark" android:id="@id/tipe_cod" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="32.0dip" android:layout_weight="1.0" />
+					</RadioGroup>
+					<Switch android:id="@id/switch_promo" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="8.0dip" android:textOn="Kode Promo Digunakan" android:text="Gunakan Voucher/Promo" android:layout_marginStart="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="@id/switch_konfirmasi" app:layout_constraintTop_toBottomOf="@id/switch_konfirmasi" />
+					<TextView android:textColor="@android:color/holo_green_dark" android:id="@id/txt_voucher" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:layout_marginStart="8.0dip" />
+					<TextView android:textColor="@android:color/holo_orange_dark" android:id="@id/txt_kode_trans" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="Kode unik akan ditambahkan pada total belanja anda." android:layout_marginStart="8.0dip" />
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView android:id="@id/card_ongkir" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="10.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="10.0dip" app:cardCornerRadius="8.0dip" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+					<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip" android:text="Pilih Ongkir" android:layout_marginStart="8.0dip" />
+					<RadioGroup android:id="@id/grup_delivery" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip">
+						<RadioButton android:id="@id/radio_delivery" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Delivery" android:layout_weight="1.0" />
+						<RadioButton android:id="@id/radio_ekspedisi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Ekspedisi Pengiriman" android:layout_weight="1.0" />
+					</RadioGroup>
+					<LinearLayout android:orientation="vertical" android:id="@id/linier_delivery_card" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip">
+						<Button android:textColor="@android:color/white" android:id="@id/button_pilih_delivery" android:background="@drawable/ripple_button_round" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pilih Lokasi Delivery" />
+						<LinearLayout android:orientation="vertical" android:id="@id/linier_selsai_delivery" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+							<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip" app:cardCornerRadius="8.0dip" app:cardElevation="4.0dip">
+								<androidx.constraintlayout.widget.ConstraintLayout android:gravity="center" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+									<ImageView android:id="@id/imageView10" android:layout_width="0.0dip" android:layout_height="0.0dip" android:scaleType="fitXY" android:tint="#9f4b4b4b" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" app:srcCompat="@drawable/maps_bg" />
+									<TextView android:textColor="@android:color/white" android:id="@id/nama_delivery" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="Belum ada lokasi" android:textAlignment="center" android:layout_marginStart="8.0dip" android:layout_marginEnd="8.0dip" app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="@id/imageView10" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toTopOf="parent" />
+								</androidx.constraintlayout.widget.ConstraintLayout>
+							</androidx.cardview.widget.CardView>
+							<TextView android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:id="@id/total_ongkir_delivery" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_list_transaksi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+	<LinearLayout android:layout_gravity="bottom|center" android:orientation="horizontal" android:id="@id/constrait_konfirm" android:background="#ffdfdddd" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="0.0dip" android:layout_alignParentBottom="true" android:animateLayoutChanges="true" android:layout_alignParentStart="true">
+		<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+			<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Total Belanja" android:layout_marginStart="16.0dip" />
+			<TextView android:textSize="18.0sp" android:textColor="@color/colorPrimaryDark" android:id="@id/total_transaksi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginStart="16.0dip" />
+		</LinearLayout>
+		<Button android:textColor="@android:color/white" android:id="@id/konfirmasi_belanja" android:background="@drawable/ripple_button_round" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="46.0dip" android:layout_marginTop="16.0dip" android:layout_marginBottom="16.0dip" android:text="Bayar" android:layout_weight="1.0" android:layout_marginEnd="8.0dip" />
+	</LinearLayout>
+</RelativeLayout>

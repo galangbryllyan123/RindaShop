@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/card_rek_topup" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="16.0dip" android:foreground="?android:selectableItemBackground" app:contentPadding="12.0dip">
+	<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<LinearLayout android:orientation="vertical" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0">
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+				<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Bank" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text=":" />
+				<TextView android:id="@id/nama_bank" android:layout_width="0.0dip" android:layout_height="fill_parent" android:layout_weight="1.0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_weight="1.0">
+				<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="No. Rekening" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text=":" />
+				<TextView android:id="@id/no_rek" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip" android:layout_weight="1.0">
+				<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Atas Nama" />
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="3.0dip" android:text=":" />
+				<TextView android:id="@id/atas_nama" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+			</LinearLayout>
+		</LinearLayout>
+		<ImageView android:id="@id/logo_bank" android:layout_width="50.0dip" android:layout_height="50.0dip" android:scaleType="fitCenter" app:srcCompat="@drawable/basket" />
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

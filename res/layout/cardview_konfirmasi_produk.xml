@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+	<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/judul_cart" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:text="judul produk anda disini" />
+	<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip">
+		<ImageView android:id="@id/gambar_cart" android:layout_width="100.0dip" android:layout_height="100.0dip" android:layout_margin="8.0dip" android:scaleType="fitXY" app:srcCompat="@drawable/add" />
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip">
+				<TextView android:textSize="11.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Qty : " />
+				<TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/detail_jumlah" android:background="@drawable/default_text_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+				<TextView android:textSize="11.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total berat : " android:layout_weight="1.0" android:textAlignment="textEnd" />
+				<TextView android:textSize="12.0sp" android:textColor="@android:color/white" android:id="@id/total_berat" android:background="@drawable/default_text_background" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+			</LinearLayout>
+			<View android:id="@id/divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" android:layout_marginTop="12.0dip" />
+			<TextView android:textSize="11.0sp" android:textColor="@color/colorPrimaryDark" android:id="@id/harga_barang" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="4.0dip" android:text="Harga Ro.32342" android:textAlignment="textEnd" />
+			<TextView android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/harga_produk_total" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Subtotal : 32323" android:textAlignment="textEnd" />
+			<TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/holo_orange_dark" android:id="@id/biaya_membership_multi" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:textAlignment="textEnd" />
+		</LinearLayout>
+	</LinearLayout>
+	<TextView android:textColor="@android:color/black" android:id="@id/catatan_txt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" />
+	<TextView android:textSize="12.0sp" android:textStyle="bold" android:textColor="@android:color/holo_green_dark" android:id="@id/cashback_txt" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="12.0dip" android:layout_marginBottom="16.0dip" />
+</LinearLayout>

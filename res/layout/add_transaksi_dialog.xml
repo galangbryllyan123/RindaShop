@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:background="@drawable/dialog_background" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fillViewport="true">
+	<LinearLayout android:orientation="vertical" android:id="@id/linier_semua" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:animateLayoutChanges="true">
+		<TextView android:textSize="18.0sp" android:gravity="center" android:id="@id/nama_barang_add" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Nama barang" />
+		<LinearLayout android:orientation="vertical" android:id="@id/linier_multi_varian" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+			<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Pilih Varian" />
+			<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="38.0dip" app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/textVie">
+				<Spinner android:id="@id/spinner_varian" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+			</FrameLayout>
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_opsi" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="8.0dip">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Opsi" />
+				<com.google.android.material.chip.ChipGroup android:id="@id/chip_grup_opsi" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:singleSelection="true" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:gravity="center" android:orientation="horizontal" android:paddingLeft="20.0dip" android:paddingRight="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="20.0dip">
+			<TextView android:paddingRight="10.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jumlah" />
+			<Button android:textColor="@android:color/white" android:id="@id/kurang3" android:background="@drawable/tambah_radius" android:paddingBottom="5.0dip" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_marginRight="10.0dip" android:text="-" />
+			<EditText android:enabled="false" android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/jumlah3" android:layout_width="32.0dip" android:layout_height="wrap_content" android:text="1" android:ems="10" android:inputType="number" android:textAlignment="center" />
+			<Button android:textColor="@android:color/white" android:id="@id/tambah3" android:background="@drawable/tambah_radius" android:paddingBottom="2.0dip" android:layout_width="34.0dip" android:layout_height="34.0dip" android:layout_marginLeft="10.0dip" android:text="+" />
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:id="@id/linier_single_varian" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_warna" android:paddingTop="12.0dip" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Warna" />
+				<com.google.android.material.chip.ChipGroup android:id="@id/chip_grup_warna" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true" />
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_ukuran" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Ukuran" />
+				<com.google.android.material.chip.ChipGroup android:id="@id/chip_grup_ukuran" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true" />
+			</LinearLayout>
+		</LinearLayout>
+		<TextView android:id="@id/caption_digital" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" />
+		<EditText android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/catatan_tambahan_single" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingBottom="12.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:hint="Catatan tambahan" android:maxLines="3" android:ems="10" android:singleLine="false" android:inputType="none" />
+		<Button android:textColor="@android:color/white" android:id="@id/beli" android:background="@drawable/ripple_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="4.0dip" android:text="Beli" />
+		<View android:id="@id/view2" android:background="#007c6868" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+	</LinearLayout>
+</androidx.core.widget.NestedScrollView>

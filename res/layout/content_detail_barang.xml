@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+	<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/constait_beli" app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true">
+			<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" app:cardBackgroundColor="@android:color/white" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="18.0dip">
+					<TextView android:textSize="24.0sp" android:textColor="@android:color/black" android:id="@id/judul_detail" android:padding="5.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+					<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:id="@id/linier_diskon" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="8.0dip" app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@id/nama_barang">
+						<TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/diskon" android:background="@drawable/kondisi_background" android:padding="3.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+						<TextView android:textSize="14.0sp" android:id="@id/harga_asli" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_marginLeft="6.0dip" android:layout_weight="1.0" />
+					</LinearLayout>
+					<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<TextView android:textSize="20.0sp" android:textColor="@color/colorPrimaryDark" android:id="@id/harga_detail" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+						<TextView android:textSize="13.0sp" android:textColor="@android:color/white" android:id="@id/kondisi" android:background="@drawable/button" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="fill_parent" android:textAlignment="center" />
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<TextView android:textColor="@android:color/white" android:id="@id/delivery_txt" android:background="@drawable/kondisi_background" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="Delivery" android:textAlignment="center" />
+						<TextView android:textColor="@android:color/white" android:id="@id/preorder_info" android:background="@drawable/proses_text_background" android:paddingTop="4.0dip" android:paddingBottom="4.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:text="  Pre Order  " android:textAlignment="center" />
+					</LinearLayout>
+					<LinearLayout android:gravity="center_vertical" android:orientation="vertical" android:id="@id/linier_cash_detail" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="8.0dip">
+						<TextView android:textSize="14.0sp" android:textColor="@android:color/white" android:id="@id/caption_cash" android:background="@drawable/green_back" android:padding="3.0dip" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+						<TextView android:textSize="14.0sp" android:textColor="@android:color/holo_green_dark" android:id="@id/jumlah_cash" android:layout_width="wrap_content" android:layout_height="fill_parent" />
+						<TextView android:textSize="12.0sp" android:textColor="#ff7c7c7c" android:id="@id/info_cash" android:padding="3.0dip" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+					</LinearLayout>
+					<TextView android:textAppearance="@style/TextAppearance.AppCompat.Subhead" android:textStyle="bold" android:id="@id/deskripsi_singkat" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:fontFamily="sans-serif-thin" android:textAlignment="center" />
+					<com.daimajia.slider.library.Indicators.PagerIndicator android:gravity="center" android:id="@id/indikator" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" app:selected_color="@color/colorPrimaryDark" app:selected_height="8.0dip" app:selected_padding_left="3.0dip" app:selected_padding_right="3.0dip" app:selected_width="8.0dip" app:shape="oval" app:unselected_color="#55555555" app:unselected_height="4.0dip" app:unselected_padding_left="3.0dip" app:unselected_padding_right="3.0dip" app:unselected_width="4.0dip" />
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<ProgressBar android:id="@id/progress_detail" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="32.0dip" android:layout_marginBottom="32.0dip" style="?android:progressBarStyle" />
+			<Button android:textColor="@android:color/white" android:id="@id/detail_btn_ulasan" android:background="@drawable/ripple_button_round" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="15.0dip" android:layout_marginTop="15.0dip" android:layout_marginRight="15.0dip" android:text="Beri Rating dan Ulasan" android:layout_weight="1.0" android:textAllCaps="false" />
+			<LinearLayout android:orientation="vertical" android:background="@drawable/linier_background" android:padding="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="8.0dip">
+				<TextView android:textSize="20.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Informasi Produk" android:textAlignment="textStart" />
+				<WebView android:scrollbarAlwaysDrawVerticalTrack="false" android:id="@id/deskripsi_panjang" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="16.0dip" android:layout_marginRight="16.0dip">
+					<Button android:textColor="@android:color/white" android:id="@id/ajukan_pertanyaan" android:background="@drawable/alamat_bg1" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ajukan Pertanyaan" android:layout_weight="1.0" android:textAllCaps="false" />
+					<Button android:textColor="@android:color/white" android:id="@id/ongkir_barang" android:background="@drawable/alamat_bg3" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Cek Ongkir" android:layout_weight="1.0" android:textAllCaps="false" />
+				</LinearLayout>
+			</LinearLayout>
+			<androidx.cardview.widget.CardView android:id="@id/card_ulasan" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<TextView android:textSize="20.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Ulasan Pembeli" />
+					<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_ulasan_produk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" />
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView android:id="@id/card_grosir" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="2.0dip" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+					<TextView android:textSize="20.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Harga Grosir" />
+					<TextView android:textColor="@color/colorPrimary" android:id="@id/grosir" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_weight="1.0" android:lineSpacingMultiplier="1.56" />
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<androidx.cardview.widget.CardView android:id="@id/card_ket_bar" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="12.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="5.0dip" app:contentPadding="10.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+					<TextView android:textSize="20.0sp" android:textColor="@android:color/black" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Keterangan Barang" />
+					<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+						<TextView android:textSize="18.0sp" android:textColor="@color/colorPrimaryDark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Spesifikasi" />
+						<LinearLayout android:orientation="horizontal" android:id="@id/linier_sku" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+							<TextView android:layout_width="87.0dip" android:layout_height="wrap_content" android:text="SKU" android:layout_weight="0.0" />
+							<TextView android:textColor="@android:color/black" android:id="@id/detail_sku" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="0.5" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:id="@id/linier_merek" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+							<TextView android:layout_width="87.0dip" android:layout_height="wrap_content" android:text="Merek" />
+							<TextView android:textColor="@android:color/black" android:id="@id/detail_merek" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="0.5" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:id="@id/linier_warna" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+							<TextView android:layout_width="87.0dip" android:layout_height="wrap_content" android:text="Warna" />
+							<TextView android:textColor="@android:color/black" android:id="@id/detail_warna" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:id="@id/linier_ukuran" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+							<TextView android:layout_width="87.0dip" android:layout_height="wrap_content" android:text="Ukuran" android:layout_weight="0.0" />
+							<TextView android:textColor="@android:color/black" android:id="@id/detail_ukuran" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_margin="5.0dip">
+							<TextView android:layout_width="87.0dip" android:layout_height="wrap_content" android:text="Berat" android:layout_weight="0.0" />
+							<TextView android:textColor="@android:color/black" android:id="@id/detail_berat" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+						<TextView android:textSize="18.0sp" android:textColor="@color/colorPrimaryDark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Detail Barang" />
+						<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+							<LinearLayout android:orientation="horizontal" android:id="@id/linier_preorder" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Pre Order" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/preorder" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+							<LinearLayout android:orientation="horizontal" android:id="@id/linier_minbeli" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Minimal Pembelian" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/minbeli" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+							<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Kondisi" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/detail_kondisi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+							<LinearLayout android:orientation="horizontal" android:id="@id/linier_isi" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Isi Kotak?" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/detail_isi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+							<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Garansi" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/detail_garansi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+							<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Stok Tersedia" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/detail_stok" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+							<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="5.0dip">
+								<TextView android:layout_width="143.0dip" android:layout_height="wrap_content" android:text="Tanggal Posting" android:layout_weight="0.0" />
+								<TextView android:textColor="@android:color/black" android:id="@id/detail_tanggal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_weight="1.0" />
+							</LinearLayout>
+						</LinearLayout>
+					</LinearLayout>
+					<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginTop="5.0dip" android:layout_marginBottom="5.0dip">
+						<TextView android:textSize="18.0sp" android:textColor="@color/colorPrimaryDark" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Pengiriman" />
+						<LinearLayout android:orientation="horizontal" android:padding="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="5.0dip">
+							<ImageView android:id="@id/jne" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/jne" />
+							<ImageView android:id="@id/tiki" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/tiki" />
+							<ImageView android:id="@id/jnt" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="25.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/jnt" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+							<ImageView android:id="@id/pos" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/pos" />
+							<ImageView android:id="@id/sicepat" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="32.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/sicepat" />
+							<ImageView android:id="@id/cod" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="45.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/cod" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+							<ImageView android:id="@id/wahana" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/wahana" />
+							<ImageView android:id="@id/jet" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_2" />
+							<ImageView android:id="@id/first" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_1" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+							<ImageView android:id="@id/lion" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_4" />
+							<ImageView android:id="@id/ninja" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_5" />
+							<ImageView android:id="@id/pahala" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_6" />
+						</LinearLayout>
+						<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+							<ImageView android:id="@id/pandu" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_7" />
+							<ImageView android:id="@id/sap" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_8" />
+							<ImageView android:id="@id/kostum" android:visibility="gone" android:layout_width="0.0dip" android:layout_height="40.0dip" android:layout_weight="1.0" app:srcCompat="@drawable/eks_3" />
+						</LinearLayout>
+					</LinearLayout>
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+	<LinearLayout android:orientation="horizontal" android:id="@id/constait_beli" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
+		<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/Keranjang_Button" android:background="@drawable/ripple_button2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+			<ImageView android:layout_width="25.0dip" android:layout_height="fill_parent" android:layout_marginRight="8.0dip" android:src="@drawable/ic_shopping_cart_48px" />
+			<TextView android:textColor="@android:color/white" android:id="@id/txt_6" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="KERANJANG" />
+		</LinearLayout>
+		<LinearLayout android:gravity="center" android:orientation="horizontal" android:id="@id/Beli_Button" android:background="@drawable/ripple_dark_kotak" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_weight="1.0">
+			<ImageView android:layout_width="25.0dip" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:src="@drawable/ic_card_giftcard_48px" />
+			<TextView android:textColor="@android:color/white" android:id="@id/txt_7" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="BELI" />
+		</LinearLayout>
+	</LinearLayout>
+</RelativeLayout>

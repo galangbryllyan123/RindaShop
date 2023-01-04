@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/hal_cardview" android:padding="20.0dip" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip" android:foreground="?android:selectableItemBackground" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="10.0dip" app:cardElevation="3.0dip" app:layout_editor_absoluteX="10.0dip" app:layout_editor_absoluteY="10.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+		<ImageView android:id="@id/halaman_img" android:layout_width="fill_parent" android:layout_height="150.0dip" app:srcCompat="@drawable/logo" />
+		<TextView android:textSize="16.0sp" android:textColor="@android:color/black" android:id="@id/halaman_txt" android:paddingLeft="15.0dip" android:paddingTop="10.0dip" android:paddingRight="15.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="TextView" android:textAlignment="center" />
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

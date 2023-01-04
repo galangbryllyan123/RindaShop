@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/cardview_keranjang" android:clickable="true" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="10.0dip" android:layout_marginBottom="5.0dip" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="10.0dip" app:cardElevation="3.0dip" app:contentPadding="20.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:textStyle="bold" android:textColor="@android:color/holo_orange_dark" android:id="@id/stok_kosong" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="4.0dip" android:text="Stok produk ini kosong" />
+		<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/judul_cart" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+		<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+			<ImageView android:id="@id/gambar_cart" android:layout_width="90.0dip" android:layout_height="90.0dip" android:scaleType="centerInside" android:layout_marginStart="2.0dip" />
+			<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="12.0dip" android:layout_marginRight="12.0dip">
+				<Button android:textColor="@android:color/white" android:id="@id/delete_empty" android:background="@drawable/ripple_button_round_list" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Hapus" app:srcCompat="@drawable/delete" />
+				<LinearLayout android:gravity="center|right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Jumlah" />
+					<Button android:textColor="@android:color/white" android:id="@id/kurang" android:background="@drawable/tambah_radius" android:paddingBottom="2.0dip" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_margin="8.0dip" android:text="-" />
+					<EditText android:enabled="false" android:textSize="12.0sp" android:textColor="@android:color/black" android:id="@id/jumlah" android:layout_width="32.0dip" android:layout_height="wrap_content" android:text="1" android:ems="10" android:inputType="number" android:textAlignment="center" />
+					<Button android:textColor="@android:color/white" android:id="@id/tambah" android:background="@drawable/tambah_radius" android:paddingBottom="2.0dip" android:layout_width="26.0dip" android:layout_height="26.0dip" android:layout_margin="8.0dip" android:text="+" />
+				</LinearLayout>
+				<LinearLayout android:layout_gravity="right" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="30.0dip" android:layout_marginTop="8.0dip" android:layout_marginBottom="12.0dip">
+					<Button android:textSize="10.0sp" android:textColor="@android:color/white" android:id="@id/bayar_btn" android:background="@drawable/alamat_bg1" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Bayar" android:layout_weight="1.0" />
+					<ImageButton android:id="@id/hapus_keranjang" android:background="@drawable/alamat_bg2" android:padding="8.0dip" android:layout_width="48.0dip" android:layout_height="wrap_content" android:scaleType="centerInside" app:srcCompat="@drawable/delete" />
+				</LinearLayout>
+				<View android:id="@id/divider" android:background="?android:listDivider" android:layout_width="fill_parent" android:layout_height="1.0dip" />
+				<LinearLayout android:gravity="right" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+					<TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:text="Subtotal:" />
+					<TextView android:textSize="14.0sp" android:textColor="@color/colorPrimaryDark" android:id="@id/harga_barang" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+				</LinearLayout>
+				<TextView android:textSize="10.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="Belum termasuk ongkir" android:textAlignment="textEnd" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:id="@id/varian_multi" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<TextView android:textSize="12.0sp" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:text="Pilih Varian" />
+			<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="38.0dip">
+				<Spinner android:id="@id/spinner_varian" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+			</FrameLayout>
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_opsi" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip" android:layout_marginBottom="8.0dip">
+				<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Opsi" />
+				<com.google.android.material.chip.ChipGroup android:id="@id/chip_grup_opsi" android:visibility="visible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:nestedScrollingEnabled="false" app:singleSelection="true" />
+			</LinearLayout>
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:id="@id/varian_single" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content">
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_ukuran" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="8.0dip">
+				<TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Ukuran" />
+				<com.google.android.material.chip.ChipGroup android:id="@id/chip_grup_ukuran" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true" />
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_warna" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginStart="8.0dip">
+				<TextView android:textSize="12.0sp" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pilih Warna" />
+				<com.google.android.material.chip.ChipGroup android:id="@id/chip_grup_warna" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true" />
+			</LinearLayout>
+		</LinearLayout>
+		<TextView android:id="@id/txt_caption_tagihan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+		<EditText android:textSize="14.0sp" android:textColor="@android:color/black" android:id="@id/catatan_tambahan" android:background="@drawable/edit_shape" android:paddingLeft="15.0dip" android:paddingTop="8.0dip" android:paddingBottom="8.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:hint="Catatan tambahan" android:maxLines="3" android:ems="10" android:maxLength="150" android:inputType="textLongMessage|textImeMultiLine|textMultiLine" />
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

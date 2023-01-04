@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:custom="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:id="@id/linier_umum" android:layout_width="fill_parent" android:layout_height="wrap_content">
+	<LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="3.0dip" android:layout_marginStart="15.0dip" android:layout_marginEnd="8.0dip">
+		<TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@id/txt_umum" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		<androidx.cardview.widget.CardView android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" app:cardBackgroundColor="@android:color/holo_red_dark" app:cardCornerRadius="8.0dip">
+			<TextView android:textSize="19.0sp" android:textColor="@android:color/white" android:id="@id/txt_flash" android:paddingLeft="8.0dip" android:paddingTop="1.0dip" android:paddingRight="8.0dip" android:paddingBottom="1.0dip" android:layout_width="wrap_content" android:layout_height="wrap_content" />
+		</androidx.cardview.widget.CardView>
+	</LinearLayout>
+	<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_umum" android:descendantFocusability="blocksDescendants" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+</LinearLayout>

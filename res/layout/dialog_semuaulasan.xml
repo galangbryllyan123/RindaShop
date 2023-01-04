@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<ImageButton android:id="@id/button_close" android:background="?selectableItemBackgroundBorderless" android:layout_width="?actionBarSize" android:layout_height="?actionBarSize" android:tint="@android:color/white" app:srcCompat="@drawable/ic_close" />
+			<TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" android:textSize="16.0sp" android:textColor="@android:color/white" android:layout_gravity="center_vertical" android:id="@id/ulasan_title" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+		</LinearLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+	<ProgressBar android:id="@id/progres_semuaulasan" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+	<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_semua_ulasan" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="16.0dip" android:layout_marginRight="16.0dip" />
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+	<LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<Button android:textColor="@android:color/white" android:id="@id/btn_top" android:background="@drawable/ripple_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="8.0dip" android:layout_marginTop="12.0dip" android:layout_marginRight="8.0dip" android:layout_marginBottom="16.0dip" />
+		<TextView android:textColor="@color/colorPrimary" android:id="@id/textView33" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="Klik untuk melihat bukti pembayaran" android:textAlignment="center" />
+		<ProgressBar android:id="@id/progress_topup" android:layout_width="fill_parent" android:layout_height="wrap_content" style="?android:progressBarStyle" />
+		<LinearLayout android:gravity="center" android:orientation="vertical" android:id="@id/topup_belum_nodata" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="64.0dip" android:layout_marginBottom="32.0dip">
+			<ImageView android:id="@id/imageView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/cute" />
+			<TextView android:textSize="18.0sp" android:id="@id/textView40" android:visibility="visible" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="Belum ada Data" android:textAlignment="center" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
+		</LinearLayout>
+		<androidx.recyclerview.widget.RecyclerView android:id="@id/rv_topup" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+	</LinearLayout>
+</androidx.core.widget.NestedScrollView>

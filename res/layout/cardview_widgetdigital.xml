@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@id/txt_digital_card" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="6.0dip" android:foreground="?android:selectableItemBackground" android:layout_weight="1.0" app:cardBackgroundColor="#ffffffff" app:cardCornerRadius="4.0dip" app:cardElevation="4.0dip" app:contentPadding="12.0dip">
+	<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
+		<TextView android:textSize="12.0dip" android:id="@id/txt_digital_judul" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Kode Referral (Opsional)" />
+		<TextView android:textSize="14.0dip" android:textColor="#ff454545" android:id="@id/txt_digital_harga" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="Rp.34334" />
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

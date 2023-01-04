@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="4.0dip" android:layout_marginRight="4.0dip" android:layout_marginBottom="16.0dip" app:cardCornerRadius="8.0dip" app:cardElevation="1.0dip" app:contentPadding="12.0dip">
+	<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginRight="8.0dip">
+		<LinearLayout android:layout_gravity="center_vertical" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="2.1">
+			<TextView android:textSize="30.0sp" android:textColor="@android:color/black" android:id="@id/txt_total_rating" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" />
+			<RatingBar android:layout_gravity="center_horizontal" android:id="@id/total_rating" android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="5.0" android:stepSize="0.1" android:progressTint="@android:color/holo_orange_light" android:secondaryProgressTint="@android:color/holo_orange_light" style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small" />
+			<TextView android:textSize="10.0sp" android:id="@id/txt_total_ulasan" android:layout_width="fill_parent" android:layout_height="wrap_content" android:textAlignment="center" />
+		</LinearLayout>
+		<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0">
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+				<RatingBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="5.0" android:stepSize="1.0" android:progressTint="@android:color/holo_orange_light" style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small" />
+				<ProgressBar android:id="@id/progres5" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:progress="50" android:layout_weight="1.0" android:progressTint="@android:color/holo_orange_light" style="?android:progressBarStyleHorizontal" />
+				<TextView android:textColor="@android:color/black" android:id="@id/txt_rating5" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<RatingBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="4.0" android:stepSize="1.0" android:progressTint="@android:color/holo_orange_light" style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small" />
+				<ProgressBar android:id="@id/progres4" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:progress="50" android:layout_weight="1.0" android:progressTint="@android:color/holo_orange_light" style="?android:progressBarStyleHorizontal" />
+				<TextView android:textColor="@android:color/black" android:id="@id/txt_rating4" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<RatingBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="3.0" android:stepSize="1.0" android:progressTint="@android:color/holo_orange_light" style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small" />
+				<ProgressBar android:id="@id/progres3" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:progress="50" android:layout_weight="1.0" android:progressTint="@android:color/holo_orange_light" style="?android:progressBarStyleHorizontal" />
+				<TextView android:textColor="@android:color/black" android:id="@id/txt_rating3" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<RatingBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="2.0" android:stepSize="1.0" android:progressTint="@android:color/holo_orange_light" style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small" />
+				<ProgressBar android:id="@id/progres2" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:progress="50" android:layout_weight="1.0" android:progressTint="@android:color/holo_orange_light" style="?android:progressBarStyleHorizontal" />
+				<TextView android:textColor="@android:color/black" android:id="@id/txt_rating2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+			</LinearLayout>
+			<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+				<RatingBar android:layout_width="wrap_content" android:layout_height="wrap_content" android:numStars="5" android:rating="1.0" android:stepSize="1.0" android:progressTint="@android:color/holo_orange_light" style="@android:style/Widget.DeviceDefault.Light.RatingBar.Small" />
+				<ProgressBar android:id="@id/progres1" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="8.0dip" android:layout_marginRight="8.0dip" android:progress="50" android:layout_weight="1.0" android:progressTint="@android:color/holo_orange_light" style="?android:progressBarStyleHorizontal" />
+				<TextView android:textColor="@android:color/black" android:id="@id/txt_rating1" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="0" />
+			</LinearLayout>
+		</LinearLayout>
+	</LinearLayout>
+</androidx.cardview.widget.CardView>

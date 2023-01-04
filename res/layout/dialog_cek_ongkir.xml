@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" android:orientation="vertical" android:background="@android:color/white" android:layout_width="fill_parent" android:layout_height="fill_parent">
+	<com.google.android.material.appbar.AppBarLayout android:layout_width="fill_parent" android:layout_height="?actionBarSize">
+		<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="fill_parent">
+			<ImageButton android:id="@id/button_close" android:background="?selectableItemBackgroundBorderless" android:layout_width="?actionBarSize" android:layout_height="?actionBarSize" android:tint="@android:color/white" app:srcCompat="@drawable/ic_close" />
+			<TextView android:textAppearance="@style/Base.TextAppearance.AppCompat.Title" android:textColor="@android:color/white" android:gravity="center_vertical" android:id="@id/saldo_title" android:layout_width="0.0dip" android:layout_height="fill_parent" android:text="Cek Ongkos Kirim" android:layout_weight="1.0" />
+		</LinearLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+	<androidx.core.widget.NestedScrollView android:layout_width="fill_parent" android:layout_height="fill_parent" android:fillViewport="true">
+		<LinearLayout android:orientation="vertical" android:paddingTop="10.0dip" android:paddingBottom="10.0dip" android:layout_width="fill_parent" android:layout_height="fill_parent" android:animateLayoutChanges="true" android:paddingStart="20.0dip" android:paddingEnd="20.0dip">
+			<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="10.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" app:cardCornerRadius="10.0dip" app:cardElevation="3.0dip" app:contentPadding="5.0dip">
+				<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+					<ImageView android:id="@id/gambar_ongkir" android:layout_width="50.0dip" android:layout_height="fill_parent" android:scaleType="fitCenter" android:layout_marginStart="5.0dip" />
+					<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:layout_marginBottom="8.0dip" android:layout_marginStart="12.0dip">
+						<TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/colorPrimary" android:id="@id/nama_produk" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+						<TextView android:textSize="18.0sp" android:textColor="@android:color/black" android:id="@id/berat_produk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+						<TextView android:textColor="@color/colorPrimary" android:id="@id/harga_produk" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
+					</LinearLayout>
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<RadioGroup android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="12.0dip">
+				<RadioButton android:id="@id/radio_pengiriman_utama" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Lokasi Pengiriman Utama" android:layout_weight="1.0" />
+				<RadioButton android:id="@id/radio_pilih_lokasi" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="4.0dip" android:text="Pilih Lokasi" android:layout_weight="1.0" />
+			</RadioGroup>
+			<ProgressBar android:id="@id/progressBar_ongkir" android:visibility="invisible" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:indeterminateOnly="true" style="@style/Widget.AppCompat.ProgressBar.Horizontal" />
+			<androidx.cardview.widget.CardView android:id="@id/card_user" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:layout_marginTop="24.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="5.0dip" app:cardBackgroundColor="@android:color/white" app:cardCornerRadius="10.0dip" app:cardElevation="3.0dip" app:contentPadding="5.0dip">
+				<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_margin="10.0dip">
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
+						<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Kecamatan" />
+						<TextView android:id="@id/kec_user" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+						<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Kota" />
+						<TextView android:id="@id/kota_user" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+					</LinearLayout>
+					<LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip">
+						<TextView android:layout_width="120.0dip" android:layout_height="wrap_content" android:text="Provinsi" />
+						<TextView android:id="@id/provinsi_user" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_weight="1.0" />
+					</LinearLayout>
+				</LinearLayout>
+			</androidx.cardview.widget.CardView>
+			<LinearLayout android:orientation="vertical" android:id="@id/pilih_lokasi_linier" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="16.0dip">
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="Provinsi" />
+				<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip">
+					<Spinner android:id="@id/provinsi_ongkir" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+				</FrameLayout>
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="Kota" />
+				<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip">
+					<Spinner android:id="@id/kota_ongkir" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+				</FrameLayout>
+				<TextView android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="Kecamatan" />
+				<FrameLayout android:background="@drawable/edit_shape" android:paddingLeft="8.0dip" android:layout_width="fill_parent" android:layout_height="42.0dip">
+					<Spinner android:id="@id/kec_ongkir" android:layout_width="fill_parent" android:layout_height="fill_parent" android:spinnerMode="dropdown" />
+				</FrameLayout>
+			</LinearLayout>
+			<Button android:textColor="@android:color/white" android:id="@id/btn_cek_ongkir" android:background="@drawable/ripple_button_round" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip" android:text="Periksa Ongkir" />
+			<LinearLayout android:orientation="vertical" android:id="@id/linier_hasil" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="24.0dip">
+				<androidx.cardview.widget.CardView android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_marginLeft="5.0dip" android:layout_marginTop="8.0dip" android:layout_marginRight="5.0dip" android:layout_marginBottom="8.0dip" app:cardCornerRadius="10.0dip" app:contentPadding="10.0dip">
+					<TextView android:textColor="@android:color/black" android:id="@id/hasil_txt" android:layout_width="fill_parent" android:layout_height="wrap_content" />
+				</androidx.cardview.widget.CardView>
+			</LinearLayout>
+		</LinearLayout>
+	</androidx.core.widget.NestedScrollView>
+</LinearLayout>
